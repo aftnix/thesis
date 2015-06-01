@@ -1,0 +1,72 @@
+\chapter{Energy Density Due to Particle Production }
+
+\lhead{\emph{Energy Density Due to Particle Production}}
+\section{Introduction}
+
+The energy density due to  scalar field is depends on the number of dimensions we're considering. The D-dimensional solution of Klein-Gordon equation on the steady state region of de-Sitter spacetime can be projected onto the Minkowskian massless modes $\chi$ to compute the corresponding Bogoliubov coefficients $\beta$. The Bogoliubov coefficients are associated with particle production and hence can be used to calculate the energy density due to particle production.
+
+
+\section{Computation of Bogoliubov coefficients, $\beta$}
+
+The Solution of Klein-Gordon equation in D-dimension as computed in equation (2.24) in $\S$ 2.4
+
+\begin{equation*}
+\Phi_{\vec{k}}^{*}(\vec{x},D) = \frac{1}{(2\pi)^{\frac{(D-1}{2}} \sqrt{8H}}e^{-\big(\frac{D-1}{2}\big)Ht}H^{(1,2)}_{\frac{D-1}{2}}\bigg(\frac{|\vec{k}|}{H}e^{-Ht}\bigg)e^{\mp i\vec{k}.\vec{x}}
+\end{equation*}
+
+Now the Minkowskian massless modes(see equation (3.6) in  $\S$ 3.4) can be generalized for D dimensions as 
+
+\begin{equation*}
+\chi_{\vec{k}} (x,D) = \frac{1}{(2\pi)^{\frac{D-1}{2}} \sqrt{2|\vec{k}|}}e^{-i(|\vec{k}|t - \vec{k}.\vec{x})}
+\end{equation*}
+
+And from (3.11) in $\S $3.4, we have 
+
+\begin{equation}
+\beta^*_{\vec{k}\vec{k}\textprime} = - (\chi^*_{\vec{k}}, \phi_{\vec{k}\textprime}=-i \mathlarger{\mathlarger{\int}} d^{D-1}x\Bigg[\chi_{\vec{k}}\frac{\partial \Phi_{\vec{k}\textprime}}{\partial t} - \frac{\partial \chi_{\vec{k}}}{\partial}\Phi_{\vec{k}\textprime}\Bigg] 
+\end{equation}
+
+Now if substitute (2.24) and (3.6) into (4.1), we have
+
+\begin{align*}
+\beta^* = &-i\Bigg( \frac{\pi}{8|\vec{k}|H}\Bigg) \delta^{D-1}(\vec{k}-\vec{k}\textprime)e^{\bigg(\frac{D-1}{2}\bigg)} Ht e^{-i|\vec{k}|t} \\
+&\times \Bigg[ \partial_0H^{(1)}_{\frac{D-1}{2}} \Bigg(\frac{|\vec{k}|}{H}e^{-Ht}\Bigg) + \Bigg( i|\vec{k}|-\frac{D-1}{2}H\Bigg) H^{(1)}_{\frac{D-1}{2}}\Bigg(\frac{|\vec{k}|}{H}e^{-Ht}\Bigg)\Bigg] \\
+&=-i\Bigg( \frac{\pi}{8|\vec{k}|H}\Bigg) e^{\bigg(\frac{D-1}{2}\bigg)} Ht e^{-i|\vec{k}|t} \\
+&\times \Bigg[ \partial_0H^{(1)}_{\frac{D-1}{2}} \Bigg(\frac{|\vec{k}|}{H}e^{-Ht}\Bigg) + \Bigg( i|\vec{k}|-\frac{D-1}{2}H\Bigg) H^{(1)}_{\frac{D-1}{2}}\Bigg(\frac{|\vec{k}|}{H}e^{-Ht}\Bigg)\Bigg] \footnotemark \numberthis
+\end{align*}
+
+\footnotetext{The Dirac-delta function enforces the conservation of angular momentum. Therefore it can be easily be suppressed.}
+
+The complex conjugate can readily be found
+
+\begin{align*}
+\beta &=+i\Bigg( \frac{\pi}{8|\vec{k}|H}\Bigg) e^{\bigg(\frac{D-1}{2}\bigg)} Ht e^{+i|\vec{k}|t} \\
+&\times \Bigg[ \partial_0H^{(1)}_{\frac{D-1}{2}} \Bigg(\frac{|\vec{k}|}{H}e^{-Ht}\Bigg) + \Bigg( -i|\vec{k}|-\frac{D-1}{2}H\Bigg) H^{(2)}_{\frac{D-1}{2}}\Bigg(\frac{|\vec{k}|}{H}e^{-Ht}\Bigg)\Bigg] \footnotemark \numberthis
+\end{align*}
+
+\footnotetext{ The following result involving properties of Hankel functions has been used
+$$ H^{(1)*}_{\frac{D-1}{2}}\Bigg(\frac{|\vec{k}}{H}e^{-Ht}\Bigg) = H^{(1)*}_{\frac{D-1}{2}}\Bigg(\frac{|\vec{k}}{H}e^{-Ht}\Bigg)$$}
+
+\section{The Number Density of Particles}
+The number density of particles with momentum $|\vec{k}|=k$ is defined as
+
+\begin{align}
+&number\quad density = \frac{\beta^* \beta}{volume}\\
+&n^D_k(t) = \frac{\beta^*(k,D,t)\beta(k,D,t)}{(2\pi)^{D-1}}=\frac{|\beta(k,D,t)|^2}{(2\pi)^{D-1}}
+\end{align}
+\section{Energy Density Due to Particle Production}
+
+As we are dealing a scalar filed, that means the quantized particles from this field will be spin zero particles, that means they will be Bosons. Bosons obey Bose-Einstein statistics\footcite[][(p221)]{landau:1958}
+\begin{equation}
+f(k) = \frac{1}{e^{(\frac{k}{k_BT})-1}}
+\end{equation}
+
+Where, $k_B$ is the usual Boltzman's constant.
+
+So finally the energy density due to particle production will be
+
+\begin{equation}
+\rho(D,t) = \frac{1}{8\pi^2} \mathlarger{\mathlarger{\int}}kn^D_k(t)f(k)d^{D-1}k
+\end{equation}
+
+This energy will be released during inflationary period when the universe is expanding exponentially. This phenomenon can be of many use. This energy has the potential to drive crucial transformation of the universe. Example of using this energy for phenomenological purposes will be touched upon in the coming sections.

@@ -1,0 +1,45 @@
+\chapter{Derivation of Normalization Constant}
+\lhead{\emph{Derivation of Normalization Constant}}
+The orthonormal modes in $\S 2.4$ of Chapter 2,
+
+\begin{equation}
+\Phi_{\vec{k}} = N_{\vec{k}} e^{\mp \vec{k}.\vec{x}}s ^{\big(\frac{D-1}{2}\big)}H^{(1,2)}_{\frac{D-1}{2}}(s),
+\end{equation}
+
+where,
+
+\begin{equation}
+s = \frac{|\vec{k}|}{H}e^{-Ht}.
+\end{equation}
+
+We need to normalize the modes as 
+
+\begin{equation}
+(\Phi_{\vec{k}},\Phi_{\vec{k}}\textprime) \equiv i \mathlarger{\mathlarger{\int}} \sqrt{|g|}d^{D-1}x \Bigg[ \Phi^*_{\vec{k}}\partial_0\Phi_{\vec{k}\textprime} - (\partial_0\Phi^*_{\vec{k}})\Phi_{\vec{k}\textprime}\Bigg] = \delta^{D-1}(\vec{k}-\vec{k}\textprime).
+\end{equation}
+\clearpage
+In our case $\sqrt{g}=e^{(D-1)Ht}$. So we have the inner product
+
+\begin{align*}
+(\Phi_{\vec{k}},\Phi_{\vec{k}}\textprime) & = -i|N_{\vec{k}}|^2|\vec{k}|e^{-Ht}e^{(D-1)}s^{(D-1)}\bigg[ H\textprime^{(1)}_{\frac{D-1}{2}}(s) H^{(2)}_{\frac{D-1}{2}}(s) - H^{(1)}_{\frac{D-1}{2}}(s)H\textprime^{(2)}_{\frac{D-1}{2}}(s)\bigg] \\
+&\times (2\pi)^{D-1}\delta^{D-1}(\vec{k}-\vec{k}\textprime)\\
+&= \delta^{D-1}(\vec{k}-\vec{k}\textprime). \numberthis
+\end{align*}\footnote{The $\textprime$ on the Hankel fucntions denotes its derivative with respect to $s$. We have also used the generalized definition of Dirac delta function, namely
+
+$$\delta^{D-1}(\vec{k}-\vec{k}\textprime)= \frac{1}{(2\pi)^{D-1}}\mathlarger{\mathlarger{\int}} e^{-i(\vec{k}-\vec{k}\textprime).\vec{x}}d^{D-1}x.$$
+
+We have also used the following identity
+$$f(\omega)\delta^{D-1}(\omega-b)= f(b)\delta^{D-1}(\omega - b)$$
+}
+
+We will now use the identity involving Hankel function :
+
+\begin{equation}
+H\textprime^{(1)}_{\frac{D-1}{2}}(s) H^{(2)}_{\frac{D-1}{2}}(s) - H^{(1)}_{\frac{D-1}{2}}(s)H\textprime^{(2)}_{\frac{D-1}{2}}(s)
+\end{equation}
+
+Therefore using the above result into (A.3) we finally get the normalization constant :
+
+\begin{equation}
+|N_{\vec{k}}| = \frac{1}{(2\pi)^{(D-1)/2}\sqrt{8H}}\Bigg( \frac{H}{|\vec{k}|}\Bigg)^{\frac{D-1}{2}}
+\end{equation}
