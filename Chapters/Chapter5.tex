@@ -1,71 +1,137 @@
-\chapter{Backreaction and Quantum Stability}
+\chapter{The Bogoliubov Transformation and Coefficients}
+\lhead{\emph{The Bogoliubov Transformation and Coefficients}}
 
-\lhead{\emph{Backreaction and Quantum Stability}}
-\section{introduction}
-Quantized fields, like that we're considering here, in de-Sitter(dS) spacetime lead to particle production. If we consider a thermal spectrum resulting from dS horizon temperature, the energy required to excite these particles reduces the expansion rate, albeit slightly. This in turn, modifies the semi-classical spacetime-metric. This modification of spacetime-metric has the potential to be a cause of instability of the dS manifold as the manifold no longer has constant curvature and loses its time invariance. So the backreaction makes the dS manifold unstable for perturbation. 
+\section{Introduction}
+Bogoliubov transformation\autocite[][(p22)]{carroll:2004} is used to demonstrate the relative nature of vacuum. That means, Whereas in flat space-time, every observer can agree on the vacuum state, its not that obvious in curved space-time. A vacuum is defined as a "no particle" state. That means if the destruction operators of quantum fields acts on vacuum, the particle number remains zero. 
 
-\section{Quantum Contribution to dS Manifold}
+We have to concentrate more on the concept of "particle". It can be shown, that the concept is not at all unambiguous in a presence of gravitation field(Or when an observer resides in a non-inertial frame). To delve into this phenomenon we need to elaborate our concept of vacuum.
 
-Classical general relativity dictates, cosmological constant $\Lambda$ has a special property so that the equation of state must satisfy 
+In Quantum Theory, there does not exist any "empty space". We can recall from our quantum mechanical study of harmonic oscillator, that the ground state of the system is not zero. A quantum field is conceived as harmonic oscillators at every point of space. So it's evident the ground state of any quantum field, which resides on every point of space, can not be zero. To be more precise, the zero point energies will sum up to be infinite.\autocite[See Chapter 3 of ][]{srednicki:2007}
 
-\begin{equation}
-w = \frac{p}{\rho}=-1
-\end{equation}
+But we can ignore this infinity. Because only the difference between the vacuum state and any other state is of physical relevance, we don't need to labor over absolute energy content of the vacuum. We can settle by considering vacuum is the lowest  possible energy state. We can elaborate the technical meaning of what we mean by calling something "lowest". One way to deal this is to recall our ladder operators we use to analyze harmonic oscillator systems\footcite{dirac:1958}. In similar fashion we can define creation and annihilation operators. The annihilation operators demotes a state by getting rid of a one particle state from it. Now If some state is thus that we can't get rid of any more particle by applying annihilation operator, we can assume we have reached the lowest energy state, and define that state to be vacuum.
 
-where $p$ is pressure and $\rho$ is the associated density. This is equivalent to energy-momentum tensor satisfying 
+But this definition is observer dependent. As we will find out in the following sections, different observer either engaged in non-inertial motion or residing in a gravitational wave\footnote{Which according to principle of equivalence, can be made indistinguishable given a sufficiently small spacetime region} will disagree on the the definition of vacuum.
 
-\begin{equation}
-T_{\mu\nu}= \Lambda g_{\mu\nu}
-\end{equation}
 
-For a positive cosmological constant , negative pressure does negative work as the universe expand. It provides energy to fill the new spacetime volume with cosmological constants. So from this view, the expansion can continue forever. 
+\section{Quantum Field in Curved Spacetime}
 
-Quantum excitations, including gravitons, modify the relation between pressure and energy density, although very slightly. Multi-particle quantum states usually have positive energy density and pressure. That means, the value of $w$ will deviate from $-1$ and the pressure will be insufficient to support $dS$ expansion. 
-
-\section{De-Sitter Thermal spactrum and Backreaction}
-
-In dS spacetime, inertial observer see a thermal distribution of particles and a dS temperature\footnote{See $\S$ 3.5 of Chapter 3 for the priliminary idea.}. Observers who detect thermal particles will not agree with the notion that physical $T_{\mu\nu}$ is proportional to $g_{\mu\nu}$. This deviation violates $dS$ symmetry. \par
-
-It is also argued\autocite{hawking:1977} that the absorption of thermal radiation via back-reaction shrinks the horizon size. The fact that inertial observers in $dS$ spacetime sees a thermal distribution can also be inferred from Unruh effect\footcite{unruh:1976}. One can consider $dS$ spacetime as a time-like hyperboloid embedded in flat spacetime of one higher spatial dimension. From the point of view of embedded spacetime, intertial observers detect a thermal bath. From the perspective of Unruh effect, its evident that the energy of absorbed thermal particles comes from the work done by the accelerating force on the detector. But from $dS$ perspective this energy comes from the work would have been done by negative pressure. So it clearly reduces the amount of expansion. If there were no quantum effect, this particle production and subsequent reduction of expansion would not have been there. \par
-
-The $dS$ temperature is $T=R^-1/2\pi $, where $R$ is the $dS$ radius. The ratio of the thermal energy density to cosmological constant is of the order in Plank units. Therefore it's parametrized by $\epsilon$. The local energy density at late times of expansion, that is after the energy due to particle production appears, is therefore slightly larger than classical case $\rho = \Lambda (1+\epsilon)$. The corresponding pressure $p \approx -\Lambda\eta(1+\xi\epsilon)$ where $\xi=1/3$ and $\xi=0$ correspond to relativistic and non-relativistic thermal particle respectively. Thus if $w\ne -1$, the expansion is no longer exponential. \par
-
-\section{Backreaction}
-From Friedman Equation 
+The Quantum Field we were considering in earlier chapter can be expanded in two different basis 
 
 \begin{equation}
-\frac{\ddot{a}}{a}= -\frac{4\pi G}{3}(\rho + 3p)
+\Phi_{\vec{k}} = \mathlarger{\sum_{\vec{k}}}\bigg[ a_{\vec{k}}\phi_{\vec{k}}+ a_{\vec{k}}^\dagger \phi_{\vec{k}}^*\bigg]= \mathlarger{\sum_{\vec{k}}}\bigg[ b_{\vec{k}}\chi_{\vec{k}}+ b_{\vec{k}}^\dagger \chi_{\vec{k}}^*\bigg]
 \end{equation}
 
-it follows that as long as $\rho>0$  and $w<-1/3$, acceleration is still positive. So we still expect an accelerated expansion of $dS$. The equation of continuity states
+where $\phi$ being the De-Sitter scalar field we calculated in the previous chapter and $\chi$ being the orthonormal modes in flat space-time. Also $a^\dagger$ and $b^\dagger$ are creation operators in two basis respectively. Whereas $a$ and $b$ are annihilation operators. These operators obey the usual commutation relations
+
+\begin{gather}
+\big[a_{\vec{k}}, a^\dagger_{\vec{k}\textprime}\big]=\big[b_{\vec{k}}, b^\dagger_{\vec{k}\textprime}\big]=\delta ^3(\vec{k}-\vec{k}\textprime) \\
+\big[a_{\vec{k}}, a_{\vec{k}\textprime}\big]=\big[a^\dagger_{\vec{k}}, a^\dagger_{\vec{k}\textprime}\big]=\big[b_{\vec{k}}, b_{\vec{k}\textprime}\big]= \big[b^\dagger_{\vec{k}}, b^\dagger_{\vec{k}\textprime}\big] = 0
+\end{gather}
+
+Two class of creation and annihilation operators can be written as linear combination of the other.
 
 \begin{equation}
-\dot{\rho} + 3\frac{\dot{a}}{a}(p + \rho) = 0
+\begin{aligned}
+& b_{\vec{k}}=\alpha a_{\vec{k}}+\beta a^\dagger_{\vec{k}\textprime} \\
+&b^\dagger_{\vec{k}}=\alpha^* a^\dagger_{\vec{k}}+\beta^* a^\dagger_{\vec{k}\textprime} 
+\end{aligned}
 \end{equation}
 
-From this, using expression of $p$ and $\rho$ stated earlier, it can be shown
+\section{Bogoliubov Transformation}
+
+Now we are ready for the Bogoliubov Transformation. From (3.1), we can infer
+
+\begin{equation*}
+\alpha a_{\vec{k}}+\beta a^\dagger_{\vec{k}\textprime} = \alpha^* a^\dagger_{\vec{k}}+\beta^* a^\dagger_{\vec{k}\textprime}  \end{equation*}
+
+Using (3.4) into this equation, we get
+
+\begin{equation*}
+a_{\vec{k}}\phi_{\vec{k}}+ a^\dagger_{\vec{}}\phi^*_{\vec{k}}=
+\end{equation*}
+
+These transformations from one of basis modes to another is known as the Bogoliubov transformations\footcite[For a review please see ][]{Jacobson:2003} named after Nikolay Bogolyubov, and the coefficients $\alpha$ and $\beta$ implementing the transformation is know as the Bogoliubov coefficients.
+
+\section{Orthonormal Relations}
+
+The invariant inner product between A and B, where Both A and B are functions of x, can defined in curved spacetime as 
 
 \begin{equation}
-\frac{\dot{\epsilon}}{\epsilon}+3(1+\xi)\frac{\dot{a}}{a}= 0
+(A,B) = i \mathlarger{\mathlarger{\int}} \bigg(A*\frac{\partial B}{\partial t} - \frac{\partial A^*}{\partial t}B \bigg) d^3x
 \end{equation}
 
-The above equation can readily solved
+The normalized modes in Minkowski spacetime given by the complete set
 
 \begin{equation}
-\epsilon \sim a^{-3(1+\xi)}
+\chi_{\vec{k}} (x,D) = \frac{1}{(2\pi)^{\frac{D-1}{2}} \sqrt{2|\vec{k}|}}e^{-i(|\vec{k}|t - \vec{k}.\vec{x})}
 \end{equation}
 
-\section{Quantum Instability}
+Then using the definition of inner product (3.5), we have \footnote{In (3.7) and (3.8) we have used the definition of Dirac delta function
+$$\delta^3 (\vec{k} - \vec{k}^\textprime) = \frac{1}{(2\pi)^3}\mathlarger{\int} e^{-i(\vec{k} - \vec{k}^\textprime).\vec{x}}d^3x $$
+and the indentity
+$$f(y)\delta ^3(y-a) = f(a)\delta ^3(y-a)$$
+}
 
-As particles produced by earlier expansion are red shifted away, new particles are produced. After many Hubble timescales, the average quantum effect adds up to the thermal bath temperature. Conservation of energy implies that the resulting proper volume of the universe $V$ is slightly smaller than the classical case:
+\begin{align}
+&(\chi_{\vec{k}}, \chi_{\vec{k}\textprime}) = \delta^3(\vec{k}-\vec{k}^\textprime) \\
+&(\chi_{\vec{k}}, \chi_{\vec{k}\textprime})=0
+\end{align}
+
+Using (3.5), (3.7) and (3.8) 
+\newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
+
+\begin{align*}
+(\chi_{\vec{k}}, \phi_{\vec{k}}) &= (\chi_{\vec{k}}, \alpha\chi_{\vec{k}\textprime}+ \beta ^*\chi^*_{\vec{k}\textprime}\\
+&= \alpha (\chi_{\vec{k}}, \chi_{\vec{k}\textprime}) + \beta ^* (\chi_{\vec{k}}, \chi^*_{\vec{k}\textprime}) \\
+&= \alpha \delta^3 (\vec{k}-\vec{k}\textprime) \\
+&= \alpha_{\vec{k}\vec{k}\textprime} \footnotemark \numberthis
+\end{align*}
+\footnotetext{For convenience we will be using a shorthand for Dirac delta function. That is for $\delta^3(\vec{k} - \vec{k}\textprime)$, we will be writing $\vec{k}\vec{k}\textprime$ in subscript.}
+
+Similarly,
+
 
 \begin{equation}
-V\approx V_{classical} . (1-\epsilon) = exp(3Ht). (1-\epsilon)
+(\chi_{\vec{k}}, \phi^*_{\vec{k}\textprime}) = \beta_{\vec{k}\vec{k}\textprime}
 \end{equation}
-and so
-\begin{equation}
-\frac{logV}{3t}\approx H - \epsilon/3t
-\end{equation}
-So the $dS$ will undergo changes after adding these quantum effects and the resulting manifold will not be of constant curvature. At late times, the resulting manifold will differ substantially from classical one. The difference will be of macroscopic order although individual corrections were small. Expansions about the original classical $dS$ spacetime should exhibit instabilities as $dS$ is no longer an exact solution once the back-reaction taken into account.\footcite[It has to be noted stability of $dS$ can be put to question from a point of view different from the one considered Here. For example see][] {ford:1985} \par
 
-The resulting quantum spacetime also cannot be time-reversal invariant. The early and late time geometries can not remain the same if we take the quantum effects into account.\footcite[It has been discussed in detail in   ][] {anderson:2014}
+Also using complex conjugate of (3.7), we can find
+
+\begin{equation}
+(\chi^*_{\vec{k}}, \phi_{\vec{k}}) = -\beta*_{\vec{k}\vec{k}\textprime}
+\end{equation}
+
+Now, equation (3.9)-(3.11) gives the Bogoliubov Coefficients.
+
+\section{Definition of Vacuum from Different Observer's Point of View}
+
+It has already been pointed out that an empty space from one observer's point of view can be full of particles from another observer's point of view. We now demonstrate this fact using the tools we have just developed.
+
+We're starting with the normalized modes of the quantum filed in  De-Sitter spacetime. Let us denote $\ket{0_\phi}$ is vacuum relative to the annihilation operators defined in De-Sitter spacetime. So by definition, we have
+
+\begin{equation}
+a_{\vec{k}}\ket{0_\phi} = 0 \quad \forall \quad \vec{k}
+\end{equation}
+
+Also , there will be a vacuum state relative to the Minkowaski operators which we can denote by $\ket{b_\chi}$ and that will obey
+
+\begin{equation}
+b_{\vec{k}}\ket{0_\chi}= 0 \quad \forall \quad\vec{k}
+\end{equation}
+
+The number operator can be defined for $\ket{\chi}$ vacuum 
+
+\begin{equation}
+n_{\chi\vec{k}}= b^\dagger_{\vec{k}}b_{\vec{k}}
+\end{equation}
+
+If the system is in $\phi$ vacuum, in which no $\phi$ particle would be observed; we would like to know if any particle can be observed by an observer who is using $\chi$ modes. We therefore calculate the $\chi$ number operator in $\phi$ vacuum
+
+\begin{align*}
+\bra{0_\phi}n_{\chi\vec{k}}\ket{0_\phi} &= \bra{0_\phi}b^\dagger_{\vec{k}}b_{\vec{k}}\ket{0_\phi} \\
+&=\bra{0_\phi}\bigg( \alpha*a^\dagger_{\vec{k}}+\beta^*a_{\vec{k}}\bigg) \bigg( \alpha a_{\vec{k}}+\beta a^\dagger_{\vec{k}}\bigg ) \ket{0_\phi} \\
+&=\beta^* \beta\bra{0_\phi}\ket{0_\phi} \\
+&= \beta^*\beta \numberthis
+\end{align*}
+
+There is no reason for this number, which is a modules of a complex number, to vanish. So the observer who is using $\chi$ modes, will detect particles whereas the observer using $\phi$ modes will detect none.

@@ -1,27 +1,72 @@
-\chapter{Concluding Remarks}
-\lhead{\emph{Concluding Remarks}}
+\chapter{Energy Density Due to Particle Production }
 
-In this study, a free quantum field is considered in a de-Sitter background. The dynamics of the spacetime geometry causes quantum fluctuations which materializes as particles. The accumulated energy in turn influences the geometry itself and which has the potential for causing instability of the de-Sitter spacetime.
+\lhead{\emph{Energy Density Due to Particle Production}}
+\section{Introduction}
 
-The study uses semiclassical approach. That is the gravitational field is not considered quantized but acts as an external classical field. The accumulated energy is added with the classical energy-momentum tensor and with friedman equation, the quantum fluctuations to the spacetime metric is calculated. 
+The energy density due to  scalar field is depends on the number of dimensions we're considering. The D-dimensional solution of Klein-Gordon equation on the steady state region of de-Sitter spacetime can be projected onto the Minkowskian massless modes $\chi$ to compute the corresponding Bogoliubov coefficients $\beta$. The Bogoliubov coefficients are associated with particle production and hence can be used to calculate the energy density due to particle production.
 
 
-The study finds that the energy which is unleashed by the spacetime metric dynamics, can be accounted for by the Friedman equation. These Quantum fluctuations have the potential to cause macroscopic influence in the evolution of the expanding universe.
+\section{Computation of Bogoliubov coefficients, $\beta$}
 
-As Inflationary scenario is becoming a  more dominant paradigm for thinking about early universe and inflationary scenario involves a exponential expansion phase, the energy produced during this phase by particle production becomes a more and more important accounting tool for different phenomenological studies. Some of the directions at which different proposed research is being done, is also noted and briefly discussed in the study.
-
-The study has two relatively simple constraint. Which can readily be removed. This removal of constraint will broaden the scope of study and also has the potential for unraveling new insights about early universe.
-
-First and most important constraint was the quantum field was considered "free" in the study. That means only way the spacetime metric comes into play is by being and external field. There is no direct coupling of the field with spacetime metric. Some studies\footcite{ford:1987} have proposed an extra term $\epsilon\Phi R$ in the lagrangian, where $R$ is the scalar curvature and $\epsilon$ is a small parameter. That means by including this term, a direct coupling with the spacetime is being conceived. If this is taken into account, then our resulting equation of motion for $\phi$ will no longer be exactly solvable like it has been solved in this study. It has to be solved perturbatively, by usual techniques of quantum field theory. This does not mean we have a quantized theory of gravity, this merely propose a way to couple with the spacetime geometry more directly. Actual quantized theory of gravity will feature creation and annihilation operators corresponding to graviton. If we want to calculate the energy due to particle production when the field has a direct coupling with the gravity, we have to fall-back to perturbation expansion. It is not always obvious if this perturbation will converge. Because constraining $\epsilon$ will be theoretically difficult as we have little empirical clue.
-
-The second constraint is less daunting but it can be suspected that by removing this constraint, nothing very significant will come out. To understand the constraint we have to recall the expression we arrived at the end of Chapter 4 :
+The Solution of Klein-Gordon equation in D-dimension as computed in equation (2.24) in $\S$ 2.4
 
 \begin{equation*}
-\rho(D,t) = \frac{1}{8\pi^2} \mathlarger{\mathlarger{\int}}kn^D_k(t)f(k)d^{D-1}k
+\Phi_{\vec{k}}^{*}(\vec{x},D) = \frac{1}{(2\pi)^{\frac{(D-1}{2}} \sqrt{8H}}e^{-\big(\frac{D-1}{2}\big)Ht}H^{(1,2)}_{\frac{D-1}{2}}\bigg(\frac{|\vec{k}|}{H}e^{-Ht}\bigg)e^{\mp i\vec{k}.\vec{x}}
 \end{equation*}
 
-It is clearly a function of time. So when it will go into the Friedman equation, it should be a function of time. That means, when the Friedman equation will be solved for $H$, the Hubble constant will be a function of time. Now the Hubble constant also appears in the equation of motion of the scalar field $\phi$. But during its solution, $H$ was not considered a function of time. Because of this all time derivative went right through $H$ without changing it. 
+Now the Minkowskian massless modes(see equation (3.6) in  $\S$ 3.4) can be generalized for D dimensions as 
 
-To remove this constraint, that means to incorporate the time dependency of Hubble constant into the equation of motion of the quantum field, we have to solve both equation of motion of the scalar field and the Friedman equation simultaneously as coupled differential equation, presumably it has to be done numerically.
+\begin{equation*}
+\chi_{\vec{k}} (x,D) = \frac{1}{(2\pi)^{\frac{D-1}{2}} \sqrt{2|\vec{k}|}}e^{-i(|\vec{k}|t - \vec{k}.\vec{x})}
+\end{equation*}
 
-It's evident that particle production during exponential expansion phase is of great importance. By broadening the scope, great insights can be achieved of the early phases of the evolution of our universe which is still has not settled into one paradigm. Recent results from precise astronomical observations give us a hint, that we are cancelling out more more models and our description of the early universe is getting more and more accurate.
+And from (3.11) in $\S $3.4, we have 
+
+\begin{equation}
+\beta^*_{\vec{k}\vec{k}\textprime} = - (\chi^*_{\vec{k}}, \phi_{\vec{k}\textprime}=-i \mathlarger{\mathlarger{\int}} d^{D-1}x\Bigg[\chi_{\vec{k}}\frac{\partial \Phi_{\vec{k}\textprime}}{\partial t} - \frac{\partial \chi_{\vec{k}}}{\partial}\Phi_{\vec{k}\textprime}\Bigg] 
+\end{equation}
+
+Now if substitute (2.24) and (3.6) into (4.1), we have
+
+\begin{align*}
+\beta^* = &-i\Bigg( \frac{\pi}{8|\vec{k}|H}\Bigg) \delta^{D-1}(\vec{k}-\vec{k}\textprime)e^{\bigg(\frac{D-1}{2}\bigg)} Ht e^{-i|\vec{k}|t} \\
+&\times \Bigg[ \partial_0H^{(1)}_{\frac{D-1}{2}} \Bigg(\frac{|\vec{k}|}{H}e^{-Ht}\Bigg) + \Bigg( i|\vec{k}|-\frac{D-1}{2}H\Bigg) H^{(1)}_{\frac{D-1}{2}}\Bigg(\frac{|\vec{k}|}{H}e^{-Ht}\Bigg)\Bigg] \\
+&=-i\Bigg( \frac{\pi}{8|\vec{k}|H}\Bigg) e^{\bigg(\frac{D-1}{2}\bigg)} Ht e^{-i|\vec{k}|t} \\
+&\times \Bigg[ \partial_0H^{(1)}_{\frac{D-1}{2}} \Bigg(\frac{|\vec{k}|}{H}e^{-Ht}\Bigg) + \Bigg( i|\vec{k}|-\frac{D-1}{2}H\Bigg) H^{(1)}_{\frac{D-1}{2}}\Bigg(\frac{|\vec{k}|}{H}e^{-Ht}\Bigg)\Bigg] \footnotemark \numberthis
+\end{align*}
+
+\footnotetext{The Dirac-delta function enforces the conservation of angular momentum. Therefore it can be easily be suppressed.}
+
+The complex conjugate can readily be found
+
+\begin{align*}
+\beta &=+i\Bigg( \frac{\pi}{8|\vec{k}|H}\Bigg) e^{\bigg(\frac{D-1}{2}\bigg)} Ht e^{+i|\vec{k}|t} \\
+&\times \Bigg[ \partial_0H^{(1)}_{\frac{D-1}{2}} \Bigg(\frac{|\vec{k}|}{H}e^{-Ht}\Bigg) + \Bigg( -i|\vec{k}|-\frac{D-1}{2}H\Bigg) H^{(2)}_{\frac{D-1}{2}}\Bigg(\frac{|\vec{k}|}{H}e^{-Ht}\Bigg)\Bigg] \footnotemark \numberthis
+\end{align*}
+
+\footnotetext{ The following result involving properties of Hankel functions has been used
+$$ H^{(1)*}_{\frac{D-1}{2}}\Bigg(\frac{|\vec{k}}{H}e^{-Ht}\Bigg) = H^{(1)*}_{\frac{D-1}{2}}\Bigg(\frac{|\vec{k}}{H}e^{-Ht}\Bigg)$$}
+
+\section{The Number Density of Particles}
+The number density of particles with momentum $|\vec{k}|=k$ is defined as
+
+\begin{align}
+&number\quad density = \frac{\beta^* \beta}{volume}\\
+&n^D_k(t) = \frac{\beta^*(k,D,t)\beta(k,D,t)}{(2\pi)^{D-1}}=\frac{|\beta(k,D,t)|^2}{(2\pi)^{D-1}}
+\end{align}
+\section{Energy Density Due to Particle Production}
+
+As we are dealing a scalar filed, that means the quantized particles from this field will be spin zero particles, that means they will be Bosons. Bosons obey Bose-Einstein statistics\footcite[][(p221)]{landau:1958}
+\begin{equation}
+f(k) = \frac{1}{e^{(\frac{k}{k_BT})-1}}
+\end{equation}
+
+Where, $k_B$ is the usual Boltzman's constant.
+
+So finally the energy density due to particle production will be
+
+\begin{equation}
+\rho(D,t) = \frac{1}{8\pi^2} \mathlarger{\mathlarger{\int}}kn^D_k(t)f(k)d^{D-1}k
+\end{equation}
+
+This energy will be released during inflationary period when the universe is expanding exponentially. This phenomenon can be of many use. This energy has the potential to drive crucial transformation of the universe. Example of using this energy for phenomenological purposes will be touched upon in the coming sections.
